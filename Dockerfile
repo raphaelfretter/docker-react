@@ -5,5 +5,5 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx
+FROM registry.redhat.io/rhel9/nginx-120
 COPY --from=builder /app/build /usr/share/nginx/html
